@@ -1,0 +1,8 @@
+.expense {
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 60rem;
+  max-width: 95%;
+  border: 5px solid #6e54b8;
+  background-color: #638e96;
+}
