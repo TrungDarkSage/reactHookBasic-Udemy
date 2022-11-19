@@ -86,7 +86,7 @@ const ExpenseForm = (props) => {
     setupdDate("");
   };
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={(event) => submitHandler(event)}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label className="new-expense__control label">Title</label>
@@ -97,7 +97,7 @@ const ExpenseForm = (props) => {
             // cuối cùng là set lại thành ''
             value={updTitle}
             className="new-expense__control input"
-            onChange={titleChangeHandler}
+            onChange={(event) => titleChangeHandler(event)}
           />
         </div>
         <div className="new-expense__control">
@@ -108,7 +108,7 @@ const ExpenseForm = (props) => {
             min="0.01"
             step="0.01"
             className="new-expense__control input"
-            onChange={amountChangeHandler}
+            onChange={(event) => amountChangeHandler(event)}
           />
         </div>
         <div className="new-expense__control">
@@ -119,7 +119,7 @@ const ExpenseForm = (props) => {
             min="2019-01-01"
             max="2023-12-31"
             className="new-expense__control input"
-            onChange={dateChangeHandler}
+            onChange={(event) => dateChangeHandler(event)}
           />
         </div>
         <div className="new-expense__actions">

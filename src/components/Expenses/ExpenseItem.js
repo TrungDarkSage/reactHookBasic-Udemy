@@ -7,9 +7,10 @@ function ExpenseItem(props) {
   // với arr có 2 đối số đc trả về từ hàm useState
   const [title, setTitle] = useState(props.title);
   // func click
-  const clickHandler = () => {
+  const clickHandler = (event) => {
     setTitle("Updated !!");
     console.log(title);
+    console.log(event);
   };
   return (
     <Card className="expense-item">
@@ -23,7 +24,7 @@ function ExpenseItem(props) {
         <h2 className="expense-item_h2">{title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
-      <button onClick={clickHandler}>Update title 😁</button>
+      <button onClick={(event) => clickHandler(event)}>Update title 😁</button>
     </Card>
   );
 }

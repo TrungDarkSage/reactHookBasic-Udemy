@@ -19,7 +19,7 @@ const NewExpense = (props) => {
     <div className="new-expense">
       {/* prop onSave phải là 1 hàm và hàm được gọi 
       khi có event bên trong component Form (submited)*/}
-      <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />
+      <ExpenseForm onSaveExpenseData={() => saveExpenseDataHandler()} />
     </div>
   );
 };
